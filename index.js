@@ -21,17 +21,9 @@ module.exports.send = function(title, message) {
 if (require.main === module) {
 	var argv = process.argv.slice(2)
 
-	var command = argv[0]
-
-	if (command !== 'send') {
-		console.error('missing a command, try use the cli like so:')
-		console.error('gcm-send [command] <message|title> <message>')
-		process.exit(1)
-	}
-
-	var title = argv[2] ? argv[1] : config.defaultTitle
+	var title = argv[1] ? argv[0] : config.defaultTitle
 	
-	var message = argv[2] || argv[1]
+	var message = argv[1] || argv[0]
 
 	module.exports.send(title, message).on('error', function (e) { console.error(e) })
 }
