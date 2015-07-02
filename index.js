@@ -7,7 +7,7 @@ var debug = require('debug')('gcm-send')
 
 var template = templateGenerator(config.endpoint)
 
-module.exports.send = function(title, message) {
+module.exports = function(title, message) {
 	var url = template({
 		title: encodeURIComponent(title),
 		message: encodeURIComponent(message)
@@ -25,5 +25,5 @@ if (require.main === module) {
 	
 	var message = argv[1] || argv[0]
 
-	module.exports.send(title, message).on('error', function (e) { console.error(e) })
+	module.exports(title, message).on('error', function (e) { console.error(e) })
 }
