@@ -1,0 +1,33 @@
+{
+  "name": "gcm-send",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "keywords": [
+    "android",
+    "gcm"
+  ],
+  "bin": {
+    "gcm-send": "index.js",
+    "gcm": "index.js"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "hyperquest": "^1.2.0",
+    "lodash-template": "^1.0.0",
+    "rc": "^1.0.3"
+  },
+  "author": "Yaniv Kessler",
+  "bugs": {
+    "url": "https://github.com/kessler/gcm-send/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kessler/gcm-send"
+  },
+  "homepage": "https://github.com/kessler/gcm-send",
+  "license": "MIT"
+}
